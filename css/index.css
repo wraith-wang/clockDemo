@@ -163,3 +163,75 @@ body {
 
   background: red;
 }
+
+input[type='radio'] {
+  display: none;
+}
+
+.radio {
+  position: relative;
+
+  display: inline-block;
+
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid red;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+input[type='radio']:checked + .radio {
+  border-color: black;
+}
+
+input[type='radio']:checked + .radio:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  content: '';
+  transform: translate(-50%, -50%);
+
+  border-radius: 5px;
+  background-color: black;
+}
+
+.checkbox {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+
+  border: 1px solid red;
+  background-color: #fff;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+input[type='checkbox']:checked + .checkbox {
+  border: 1px solid blue;
+  background-color: blue;
+}
+
+input[type='checkbox']:checked + .checkbox:before {
+  position: absolute;
+
+  width: 6px;
+  height: 13px;
+  margin-top: -2px;
+  margin-left: 4px;
+
+  content: '';
+  transform: rotate(45deg);
+
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+}
